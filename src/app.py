@@ -76,7 +76,7 @@ with tab3:
 
         Ce projet est inspiré du 
         [projet](https://docs.google.com/spreadsheets/d/1waI3NYgmy_oPJmx49hr5VjXat5jjmP6rcM8vHtzc73w/edit?gid=0#gid=0) 
-        du très honorable **u/Camion997**. Il a pour but de prendre la relève de son projet pour 
+        du très honorable **u/PolyCrowdsourced**. Il a pour but de prendre la relève de son projet pour 
         faire revivre un outil génial qui commençait à prendre la poussière.
 
         ---
@@ -84,7 +84,7 @@ with tab3:
         #### PolyNotes 2.0 vise à :
         * Offrir une interface plus ✨**jolie**✨ et plus interactive.
         * Assurer la **pérennité du projet** en faisant un projet [open source](https://github.com/SaMachin/PolyNotes-2.0/tree/main)
-        * Ajouter une **validation automatique des données**, ce qui permet de ne pas faire planter Google Sheets (probablement ce qui a tué le projet de u/Camion997 😅)
+        * Ajouter une **validation automatique des données**, ce qui permet de ne pas faire planter Google Sheets (probablement ce qui a tué le projet de u/PolyCrowdsourced 😅)
 
         ---
 
