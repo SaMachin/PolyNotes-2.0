@@ -1,5 +1,7 @@
 ## Infos sur PolyNotes 2.0
 
+PolyNotes 2.0 est un tableau de bord interactif pour explorer les notes moyennes des cours de Polytechnique Montréal.
+
 Ce projet est inspiré du 
 [projet](https://docs.google.com/spreadsheets/d/1waI3NYgmy_oPJmx49hr5VjXat5jjmP6rcM8vHtzc73w/edit?gid=0#gid=0) 
 du très honorable **u/Camion997**. Il a pour but de prendre la relève de son projet, car il n'a pas été
