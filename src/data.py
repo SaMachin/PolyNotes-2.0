@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
-from streamlit_gsheets import GSheetsConnection
 from utils import *
-
-conn = st.connection("gsheets", type=GSheetsConnection)
 
 sheet_id = "1ILE5D97Ea0444sMdJCCgDsLRrD8aFfEBBIUMot9CaKM"
 gid = "1856131741"
