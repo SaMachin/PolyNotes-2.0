@@ -17,7 +17,7 @@ error_logs = []
 
 for _, row in df.iterrows():
     session = row["Sélection de la session"]
-    horodateur = row["Horodateur"]
+    horodatage = row["Horodatage"]
     for course_grade in str(row["Moyennes"]).split("\n"):
         text = course_grade.strip()
         if not text:
@@ -29,7 +29,7 @@ for _, row in df.iterrows():
             sigle, grade = course_grade.split("-")
             grade = float(grade.replace(",", "."))
             rows.append({
-                "Horodateur": horodateur,
+                "Horodatage": horodatage,
                 "Session": session,
                 "Cours": sigle.strip().upper(),
                 "Moyenne du groupe": grade
