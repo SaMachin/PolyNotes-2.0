@@ -12,7 +12,7 @@ mis à jour depuis un certains temps.
 
 ---
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://polynotes-2.streamlit.app/)
 
 ### How to run it on your own machine
 
