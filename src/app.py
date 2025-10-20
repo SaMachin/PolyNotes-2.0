@@ -82,8 +82,8 @@ with tab3:
         ---
 
         #### PolyNotes 2.0 vise à :
-        * Offir une interface plus ✨**jolie**✨ et plus interactive.
-        * Assurer la **pérénité du projet** en faisant un projet [open source](https://github.com/SaMachin/PolyNotes-2.0/tree/main)
+        * Offrir une interface plus ✨**jolie**✨ et plus interactive.
+        * Assurer la **pérennité du projet** en faisant un projet [open source](https://github.com/SaMachin/PolyNotes-2.0/tree/main)
         * Ajouter une **validation automatique des données**, ce qui permet de ne pas faire planter Google Sheets (probablement ce qui a tué le projet de u/Camion997 😅)
 
         ---
