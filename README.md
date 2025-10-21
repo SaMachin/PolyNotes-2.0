@@ -20,6 +20,10 @@ faire revivre un outil génial qui commençait à prendre la poussière.
 * Pour contribuer au registre de notes: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSeq0mzVsHSnFjtHvvJbmBOA2-SiFuXF2hggwZl3Ia99VuTaZw/viewform?usp=pp_url&entry.1761690987=COURS1+-+MOYENNE1%0ACOURS2+-+MOYENNE2%0ACOURS3+-+MOYENNE3)
 * Pour aller explorer les données: [Google Sheets](https://docs.google.com/spreadsheets/d/1ILE5D97Ea0444sMdJCCgDsLRrD8aFfEBBIUMot9CaKM/edit?usp=sharing)
 
+---
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://polynotes-2.streamlit.app/)
+
 ### Comment rouler le projet localment
 
 1. Télécharger les dépendances
