@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from data import df_normalized
+from data import gen_data
+
+avg_df, df_normalized, error_logs = gen_data()
 
 #fig1------------------------------
 

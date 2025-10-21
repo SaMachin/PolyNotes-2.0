@@ -1,6 +1,9 @@
 import streamlit as st
-from data import *
+from utils import *
+from data import gen_data
 st.title("PolyNotes 2.0")
+
+avg_df, df_normalized, error_logs = gen_data()
 
 # ---------------------------
 # Barre de recherche pour filtrer un cours
