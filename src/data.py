@@ -1,3 +1,7 @@
+"""
+Traitement et normalisation des données
+"""
+
 import streamlit as st
 import pandas as pd
 from utils import *
@@ -6,7 +10,6 @@ sheet_id = "1ILE5D97Ea0444sMdJCCgDsLRrD8aFfEBBIUMot9CaKM"
 gid = "1856131741"
 
 csv_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}"
-
 
 
 def gen_data():

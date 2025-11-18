@@ -1,3 +1,7 @@
+"""
+Construction des graphiques pour l'application
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 from data import gen_data

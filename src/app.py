@@ -1,7 +1,13 @@
+"""
+Structure des pages de l'application
+"""
+
 import streamlit as st
 from utils import *
 from data import gen_data
 st.title("PolyNotes 2.0")
+
+tab1, tab2, tab3 = st.tabs(["📋 Données", "📈 Graphique des notes", "🗿 About"])
 
 avg_df, df_normalized, error_logs = gen_data()
 
@@ -20,8 +26,6 @@ else:
 if search_course:
         global_avg = df_normalized[df_normalized["Cours"].str.upper().str.contains(search_course.upper())]["Moyenne du groupe"].mean()
         st.markdown(f"**📌 Moyenne du cours '{search_course.upper()}' à travers toutes les sessions : {round(global_avg,2)} | {note_to_letter(global_avg)}**")
-
-tab1, tab2, tab3 = st.tabs(["📋 Données", "📈 Graphique des notes", "🗿 About"])
 
 with tab1:
     col1, col2 = st.columns([1, 3])
