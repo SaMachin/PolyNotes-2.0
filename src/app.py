@@ -4,21 +4,22 @@ Structure des pages de l'application
 
 import streamlit as st
 from utils import *
-from data import gen_data
+from data import dataFramify, findAvgFormattedGrade
 st.title("PolyNotes 2.0")
 
 tab1, tab2, tab3 = st.tabs(["📋 Données", "📈 Graphique des notes", "🗿 About"])
 
-avg_df, df_normalized, error_logs = gen_data()
+df_normalized, error_logs = dataFramify()
+df_avg = findAvgFormattedGrade(df_normalized)
 
 # ---------------------------
 # Barre de recherche pour filtrer un cours
 # ---------------------------
 search_course = st.text_input("🔎 Rechercher un cours (sigle)").strip()
 if search_course:
-    filtered_df = avg_df[avg_df["Cours"].str.upper().str.contains(search_course.upper())]
+    filtered_df = df_avg[df_avg["Cours"].str.upper().str.contains(search_course.upper())]
 else:
-    filtered_df = avg_df
+    filtered_df = df_avg
 
 # ---------------------------
 # Moyenne a travers toutes les sessions

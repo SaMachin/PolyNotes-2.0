@@ -11,7 +11,8 @@ gid = "1856131741"
 csv_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}"
 
 
-def gen_data():
+def dataFramify():
+    """Lit les données depuis Google Sheets et les normalise en DataFrame."""
     df = pd.read_csv(csv_url, sep=",", encoding="utf-8")
     # ---------------------------
     # Normalisation des données
@@ -43,22 +44,26 @@ def gen_data():
 
     df_normalized = pd.DataFrame(rows)
 
+    return df_normalized, error_logs
+
+def findAvgFormattedGrade(df):
+    """Calcule la moyenne formatée par cours et session."""
     # ---------------------------
     # Calcul moyenne par cours & session
     # ---------------------------
-    avg_df = df_normalized.groupby(["Cours", "Session"], as_index=False)["Moyenne du groupe"].mean()
-    avg_df = avg_df.sort_values(by=["Cours", "Session"]).reset_index(drop=True)
+    df_avg = df.groupby(["Cours", "Session"], as_index=False)["Moyenne du groupe"].mean()
+    df_avg = df_avg.sort_values(by=["Cours", "Session"]).reset_index(drop=True)
 
     # ---------------------------
     # Format float 2 décimales + conversion lettre
     # ---------------------------
-    avg_df["Moyenne du groupe"] = avg_df["Moyenne du groupe"].map(lambda x: f'{round(x, 2):.2f}')
-    avg_df["Lettre"] = avg_df["Moyenne du groupe"].map(note_to_letter)
+    df_avg["Moyenne du groupe"] = df_avg["Moyenne du groupe"].map(lambda x: f'{round(x, 2):.2f}')
+    df_avg["Lettre"] = df_avg["Moyenne du groupe"].map(note_to_letter)
 
     # ---------------------------
     # Trie en fonction du sigle puis de la session
     # ---------------------------
-    avg_df["SortKey"] = avg_df["Session"].map(session_sort_key)
-    avg_df = avg_df.sort_values(by=["Cours", "SortKey"]).drop(columns="SortKey").reset_index(drop=True)
+    df_avg["SortKey"] = df_avg["Session"].map(session_sort_key)
+    df_avg = df_avg.sort_values(by=["Cours", "SortKey"]).drop(columns="SortKey").reset_index(drop=True)
     
-    return avg_df, df_normalized, error_logs
+    return df_avg

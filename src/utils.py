@@ -34,6 +34,7 @@ def color_letters(val):
         "D": "orange",
         "F": "red"
     }
+    
     return f"color: {color_map.get(val, 'black')}"
 
 def session_sort_key(session):
@@ -50,12 +51,13 @@ def session_sort_key(session):
     num = int(session[1:]) if session[1:].isdigit() else 999
 
     order_map = {"A": 1, "H": 2, "E": 3}
+
     return (num, order_map.get(letter, 999))
 
 def check_data_quality(df):
     """Vérifie s'il y a des anomalies dans les données"""
     issues = []
-    
+
     if df["Moyenne du groupe"].isnull().any():
         issues.append("⚠️ Certaines notes sont manquantes.")
 

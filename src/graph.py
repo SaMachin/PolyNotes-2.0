@@ -4,9 +4,9 @@ Construction des graphiques pour l'application
 
 import matplotlib.pyplot as plt
 import numpy as np
-from data import gen_data
+from data import dataFramify
 
-avg_df, df_normalized, error_logs = gen_data()
+df_normalized, _ = dataFramify()
 
 #fig1------------------------------
 
