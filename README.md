@@ -35,6 +35,6 @@ faire revivre un outil génial qui commençait à prendre la poussière.
 2. Lancer l'app
 
    ```
-   $ streamlit run streamlit_app.py
+   $ streamlit run src/app.py
    ```
 3. Enjoy 🤙
