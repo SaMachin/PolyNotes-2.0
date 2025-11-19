@@ -33,6 +33,10 @@ def dataFramify():
             try:
                 sigle, grade = course_grade.split("-")
                 grade = float(grade.replace(",", "."))
+
+                if not (0.0 <= grade <= 4.0):
+                    raise ValueError(f"Note hors limites [0;4] : {grade}")
+
                 rows.append({
                     "Horodatage": horodatage,
                     "Session": session,

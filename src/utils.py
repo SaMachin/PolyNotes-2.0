@@ -68,10 +68,6 @@ def check_data_quality(df):
     if not invalid_sessions.empty:
         issues.append(f"⚠️ {len(invalid_sessions)} sessions invalides détectées.")
 
-    over_max = df[df["Moyenne du groupe"] > 4.0]
-    if not over_max.empty:
-        issues.append(f"❗ {len(over_max)} note(s) > 4.0 détectée(s).")
-
     if len(issues) == 0:
         issues.append("✅ Aucune anomalie détectée.")
 
