@@ -30,8 +30,8 @@ df_normalized["Trimestre"] = df_normalized["Session"].str.extract(r"([AHEÉ])")[
 
 # Calcul moyenne par année + trimestre
 avg_by_year_trim = df_normalized.groupby(["Annee", "Trimestre"])["Moyenne du groupe"].mean().unstack(fill_value=0)
-trimestres = ["A", "H", "E"]
-colors = {"A":"#4CAF50", "H":"#2196F3", "E":"#FF9800"}
+trimestres = ["H", "E", "A"]
+colors = {"H":"#2196F3", "E":"#FF9800", "A":"#4CAF50"}
 
 # Moyenne totale par année (pour la ligne superposée)
 avg_by_year_total = df_normalized.groupby("Annee")["Moyenne du groupe"].mean().sort_index()
