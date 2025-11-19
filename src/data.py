@@ -2,7 +2,6 @@
 Traitement et normalisation des données
 """
 
-import streamlit as st
 import pandas as pd
 from utils import *
 
